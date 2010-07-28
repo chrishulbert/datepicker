@@ -1,6 +1,9 @@
 Javascript Date Picker
 ======================
 
+![Date picker](http://imgur.com/o2Jvt.png)
+
+
 I've been fed up with all the JS calendar date pickers that are out
 there - they're all too complicated, heavy, rely on frameworks that
 I don't want to include, or they're ugly, or have anti-commercial
