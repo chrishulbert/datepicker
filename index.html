@@ -30,6 +30,14 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
+
+
+  <!-- These are the includes for the date/time pickers: -->
+  <link rel="stylesheet" type="text/css" href="datepicker.css" /> 
+  <script type="text/javascript" src="datepicker.js"></script> 
+  <script type="text/javascript" src="timepicker.js"></script> 
+  <!-- End of the includes for the date/time pickers -->
+
 	
 </head>
 
@@ -49,17 +57,43 @@
       <span class="small">by <a href="http://github.com/chrishulbert">chrishulbert</a></span></h1>
 
     <div class="description">
-      SImple, light Javascript date picker, with no javascript framework dependencies.
+      Simple, light Javascript date picker, with no javascript framework dependencies.
     </div>
 
-    <h2>Dependencies</h2>
-<p>None</p>
+<h2>Demo</h2>
+<p>
+
+  <p>Start Date / Time:<br /> 
+    <input id="start_dt" class='datepicker' size='11' title='D-MMM-YYYY' /> 
+    <input id="start_tm" class='timepicker' size='5'  title='HH:MM' /> 
+  </p> 
+  
+  <p>End Date:<br /> 
+    <input id="end_dt" class='datepicker' size='11' title='D-MMM-YYYY' /> 
+    <input id="end_tm" class='timepicker' size='5'  title='HH:MM' /> 
+  </p> 
+
+</p>
+
 <h2>Install</h2>
-<p>See the demo page - you'll need a js file, a CSS file, a couple lines in your html's head section, and add the 'datepicker' class to your textboxes.</p>
-<h2>Authors</h2>
-<p>Chris Hulbert (chris.hulbert@gmail.com)<br/><br/>      </p>
+
+<p>Put the following 2 or 3 lines in your page's &lt;head&gt; section:</p>
+<pre>&lt;link rel="stylesheet" type="text/css" href="datepicker.css" /&gt; 
+&lt;script type="text/javascript" src="datepicker.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="timepicker.js"&gt;&lt;/script&gt;</pre>
+
+<p>On any &lt;input&gt; that you want to have a date picker for, set/add the 'datepicker' class:</p>
+<pre>&lt;input id='start_dt' class='datepicker'&gt;
+&lt;input id='another_dt' class='myclass datepicker'&gt;</pre>
+
+<p>On any &lt;input&gt; that you want to have a time picker for, set/add the 'timepicker' class:</p>
+<pre>&lt;input id='start_dt' class='timepicker'&gt;
+&lt;input id='another_dt' class='myclass timepicker'&gt;</pre>
+
+<p>I hope you enjoy these pickers as much as I enjoyed getting it working cross-browser :)</p>
+
 <h2>Contact</h2>
-<p>Chris Hulbert (chris.hulbert@gmail.com)<br/>      </p>
+<p>Chris Hulbert (chris.hulbert@gmail.com)</p>
 
 
     <h2>Download</h2>
