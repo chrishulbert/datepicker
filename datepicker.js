@@ -169,8 +169,15 @@ function insertAfter(newItem, existingItem) {
   }
 }
 
+/*
+ * onDOMReady
+ * Copyright (c) 2009 Ryan Morr (ryanmorr.com)
+ * Licensed under the MIT license.
+ */
+function onDOMReady(fn,ctx){var ready,timer;var onStateChange=function(e){if(e&&e.type=="DOMContentLoaded"){fireDOMReady()}else if(e&&e.type=="load"){fireDOMReady()}else if(document.readyState){if((/loaded|complete/).test(document.readyState)){fireDOMReady()}else if(!!document.documentElement.doScroll){try{ready||document.documentElement.doScroll('left')}catch(e){return}fireDOMReady()}}};var fireDOMReady=function(){if(!ready){ready=true;fn.call(ctx||window);if(document.removeEventListener)document.removeEventListener("DOMContentLoaded",onStateChange,false);document.onreadystatechange=null;window.onload=null;clearInterval(timer);timer=null}};if(document.addEventListener)document.addEventListener("DOMContentLoaded",onStateChange,false);document.onreadystatechange=onStateChange;timer=setInterval(onStateChange,5);window.onload=onStateChange};
+
 // This is called when the page loads, it searches for inputs where the class is 'datepicker'
-function datePickerInit() {
+onDOMReady(function(){
   // Search for elements by class
   var allElements = document.getElementsByTagName("*");
   for (i=0; i<allElements.length; i++) {
@@ -188,11 +195,4 @@ function datePickerInit() {
       insertAfter(a, allElements[i]);
     }
   }
-}
-
-// Hook myself into the page load event
-if (window.addEventListener) { // W3C standard
-  window.addEventListener('load', datePickerInit, false);
-} else if (window.attachEvent) { // Microsoft
-  window.attachEvent('onload', datePickerInit);
-}
+});
