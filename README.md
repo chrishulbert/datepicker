@@ -11,3 +11,7 @@ licenses, etc etc etc. So here's mine.
 
 Please see more details at my blog here:
 [http://splinter.com.au/blog/?p=278](http://splinter.com.au/blog/?p=278)
+
+## License
+
+MIT license applies
