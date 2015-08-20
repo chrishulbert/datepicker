@@ -48,3 +48,13 @@
 .datepickershow img {
   border:0;
 }
+.monthDsp
+{
+width:80px;
+font-size:9px;
+}
+.daysRow
+{
+font-family:sans-serif;
+font-size:11px;
+}

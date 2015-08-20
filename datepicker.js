@@ -66,6 +66,7 @@ function createCalendar(div, month) {
   lastYearBn.value='<<';
   lastYearBn.onclick=chooseDate;
   lastYearBn.setAttribute('date',new Date(month.getFullYear(),month.getMonth()-12,1,0,0,0,0).toString());
+  var td = topRow.insertCell(-1);
   var lastMonthBn = document.createElement('input');
   lastMonthBn.type='button'; // Have to immediately set the type due to IE
   td.appendChild(lastMonthBn);
@@ -73,13 +74,14 @@ function createCalendar(div, month) {
   lastMonthBn.onclick=chooseDate;
   lastMonthBn.setAttribute('date',new Date(month.getFullYear(),month.getMonth()-1,1,0,0,0,0).toString());
   var td = topRow.insertCell(-1);
-  td.colSpan=5;
+  td.colSpan=3;
   var mon = document.createElement('input');
   mon.type='text';
   td.appendChild(mon);
   mon.value = getMonthYearString(month);
   mon.size=15;
   mon.disabled='disabled';
+  mon.className='monthDsp';
   var td = topRow.insertCell(-1);
   var nextMonthBn = document.createElement('input');
   nextMonthBn.type='button';
@@ -87,6 +89,7 @@ function createCalendar(div, month) {
   nextMonthBn.value = '>';
   nextMonthBn.onclick=chooseDate;
   nextMonthBn.setAttribute('date',new Date(month.getFullYear(),month.getMonth()+1,1,0,0,0,0).toString());
+  var td = topRow.insertCell(-1);
   var nextYearBn = document.createElement('input');
   nextYearBn.type='button'; // Have to immediately set the type due to IE
   td.appendChild(nextYearBn);
@@ -94,14 +97,14 @@ function createCalendar(div, month) {
   nextYearBn.onclick=chooseDate;
   nextYearBn.setAttribute('date',new Date(month.getFullYear(),month.getMonth()+12,1,0,0,0,0).toString());  
   var daysRow = tbl.insertRow(-1);
-  daysRow.insertCell(-1).innerHTML="Mon";
+  daysRow.insertCell(-1).innerHTML="Mon";  
   daysRow.insertCell(-1).innerHTML="Tue";
   daysRow.insertCell(-1).innerHTML="Wed";
   daysRow.insertCell(-1).innerHTML="Thu";
   daysRow.insertCell(-1).innerHTML="Fri";
   daysRow.insertCell(-1).innerHTML="Sat";
   daysRow.insertCell(-1).innerHTML="Sun";
-  
+  daysRow.className='daysRow';  
   // Make the calendar
   var selected = parseMyDate(textbox.value); // Try parsing the date
   var today = new Date();

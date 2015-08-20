@@ -1,7 +1,7 @@
 Javascript Date Picker
 ======================
 
-![Date picker](http://i.imgur.com/pxsHqeB.png)
+![Date picker](http://i.imgur.com/cnkJQ6B.png)
 
 
 I've been fed up with all the JS calendar date pickers that are out
