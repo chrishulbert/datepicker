@@ -1,0 +1,97 @@
+.datepickerdropdown
+  $color-over: #EE5722
+  $color: #4B6671
+  $size:40px
+
+  position: absolute
+  background-color: #FEFEFE
+  box-shadow: 0 0 12px rgba(0,0,0,0.3)
+  color: $color
+
+  input
+    outline: none
+    cursor: pointer
+    border: none
+    background-color: transparent
+    font-size: 14px
+    line-height: 30px
+    color: #4E6472
+    position: relative
+    width: $size
+    height: $size
+
+  table
+    border-collapse: collapse
+    text-align: center
+  td
+    position: relative
+    height: 45px
+    width: 55px
+    &:hover
+      &:before
+        opacity: 1
+      input
+        color: $color-over
+    &:before
+      content: ""
+      position: absolute
+      width: $size
+      height: $size
+      border: 1px solid $color-over
+      left: calc(50% - 22px)
+      top: calc(50% - 22px)
+      opacity: 0
+      border-radius: $size
+      transition-property: opacity
+      transition-duration: 0.3s
+
+
+  // header
+  tr:first-child
+    line-height: 60px
+    border-bottom: 1px solid #ECECEC
+    td
+      border-bottom: 1px solid #ECECEC
+      &:last-child input,
+      &:first-child input
+        display: none
+
+      &:nth-child(2) input,
+      &:nth-child(4) input
+        font-size: 24px
+        font-weight: 100
+        &:hover
+          color: $color-over
+      &:before
+        display: none
+      &:hover
+        input
+          color: $color
+  // days-label
+  .daysRow
+    font-size: 10px
+    font-weight: 800
+    text-transform: uppercase
+    line-height: 40px
+    td
+      height: 0
+      padding-top: 30px
+      padding-bottom: 15px
+      line-height: 1em
+      &:before
+        content: none
+
+  .othermonth
+    color: #C7CBCE
+
+  tr:last-child td
+    padding-bottom: 20px
+    &:before
+      top: calc(50% - #{$size/2} - 10px)
+
+  input.monthDsp
+    border: none
+    text-align: center
+    font-size: 24px
+    font-weight: 100
+    width: 100%
