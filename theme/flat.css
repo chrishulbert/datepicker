@@ -1,0 +1,81 @@
+.datepickerdropdown {
+  position: absolute;
+  background-color: #FEFEFE;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  color: #4B6671; }
+  .datepickerdropdown input {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4E6472;
+    position: relative;
+    width: 40px;
+    height: 40px; }
+  .datepickerdropdown table {
+    border-collapse: collapse;
+    text-align: center; }
+  .datepickerdropdown td {
+    position: relative;
+    height: 45px;
+    width: 55px; }
+    .datepickerdropdown td:hover:before {
+      opacity: 1; }
+    .datepickerdropdown td:hover input {
+      color: #EE5722; }
+    .datepickerdropdown td:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #EE5722;
+      left: calc(50% - 22px);
+      top: calc(50% - 22px);
+      opacity: 0;
+      border-radius: 40px;
+      transition-property: opacity;
+      transition-duration: 0.3s; }
+  .datepickerdropdown tr:first-child {
+    line-height: 60px;
+    border-bottom: 1px solid #ECECEC; }
+    .datepickerdropdown tr:first-child td {
+      border-bottom: 1px solid #ECECEC; }
+      .datepickerdropdown tr:first-child td:last-child input, .datepickerdropdown tr:first-child td:first-child input {
+        display: none; }
+      .datepickerdropdown tr:first-child td:nth-child(2) input, .datepickerdropdown tr:first-child td:nth-child(4) input {
+        font-size: 24px;
+        font-weight: 100; }
+        .datepickerdropdown tr:first-child td:nth-child(2) input:hover, .datepickerdropdown tr:first-child td:nth-child(4) input:hover {
+          color: #EE5722; }
+      .datepickerdropdown tr:first-child td:before {
+        display: none; }
+      .datepickerdropdown tr:first-child td:hover input {
+        color: #4B6671; }
+  .datepickerdropdown .daysRow {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 40px; }
+    .datepickerdropdown .daysRow td {
+      height: 0;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      line-height: 1em; }
+      .datepickerdropdown .daysRow td:before {
+        content: none; }
+  .datepickerdropdown .othermonth {
+    color: #C7CBCE; }
+  .datepickerdropdown tr:last-child td {
+    padding-bottom: 20px; }
+    .datepickerdropdown tr:last-child td:before {
+      top: calc(50% - 20px - 10px); }
+  .datepickerdropdown input.monthDsp {
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 100;
+    width: 100%; }
+
+/*# sourceMappingURL=flat.css.map */
